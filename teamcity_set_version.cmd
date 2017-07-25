@@ -1,1 +1,1 @@
-echo ##teamcity[buildNumber '1.1.1-ci-%1']
+echo ##teamcity[buildNumber '1.1.2-%1']

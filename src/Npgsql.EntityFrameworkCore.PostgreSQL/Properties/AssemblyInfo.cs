@@ -7,5 +7,5 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 [assembly: DesignTimeProviderServices(
     typeName: "Microsoft.EntityFrameworkCore.Scaffolding.Internal.NpgsqlDesignTimeServices",
-    assemblyName: "Npgsql.EntityFrameworkCore.PostgreSQL.Design, Version=1.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7",
+    assemblyName: "Npgsql.EntityFrameworkCore.PostgreSQL.Design, Version=1.1.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7",
     packageName: "Npgsql.EntityFrameworkCore.PostgreSQL.Design")]
