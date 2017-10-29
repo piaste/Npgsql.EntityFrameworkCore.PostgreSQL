@@ -23,6 +23,21 @@ To enable this feature on an entity, insert the following code into your models'
 modelBuilder.Entity<MyEntity>().ForNpgsqlUseXminAsConcurrencyToken();
 ```
 
+## PostgreSQL Index Methods
+
+PostgreSQL supports a number of _index methods_, or _types_. These are specified at index creation time via the `USING _method_` clause, see the [PostgreSQL docs for `CREAT
+E INDEX`](https://www.postgresql.org/docs/current/static/sql-createindex.html) and [this page](https://www.postgresql.org/docs/current/static/indexes-types.html) for info o
+n the different types.
+
+The Npgsql EF Core provider allows you to specify the index method to be used by specifying `ForNpgsqlHasMethod()` on your index in your context's OnModelCreating:
+```c#
+protected override void OnModelCreating(ModelBuilder modelBuilder) {
+    modelBuilder.Entity<Blog>()
+        .HasIndex(b => b.Url)
+        .ForNpgsqlHasMethod("gin");
+}
+```
+
 ## Using a database template
 
 When creating a new database,
